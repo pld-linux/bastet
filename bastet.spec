@@ -1,4 +1,5 @@
 Summary:	Tetris game
+Summary(hu.UTF-8):	Egy Tetris-klón
 Summary(pl.UTF-8):	Gra typu tetris
 Name:		bastet
 Version:	0.43
@@ -13,7 +14,19 @@ BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Tetris game clone.
+Bastet stands for "bastard tetris", and is a simple ncurses-based
+Tetris(R) clone for Linux. Unlike normal Tetris(R), however, Bastet
+does not choose your next brick at random. Instead, it uses a special
+algorithm designed to choose the worst brick possible. As you can
+imagine, playing Bastet can be a very frustrating experience!
+
+%description -l hu.UTF-8
+Bastet a "bastard tetris" rövidítése, és egy egyszerű ncurses-alapú
+Tetris(R)-klón Linux-ra. A hagyományos Tetris(R)-szel ellentétben a
+Bastet a következő elemet nem véletlenszerűen választja, hanem egy
+speciális algoritmust használ, amellyel a lehető legrosszabb elemet
+választja ki. Gondolhatod, hogy a Bastet-tel való játék nagyon mennyire
+frusztráló lehet!
 
 %description -l pl.UTF-8
 Klon gry tetris.
