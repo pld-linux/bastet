@@ -29,17 +29,22 @@ választja ki. Gondolhatod, hogy a Bastet-tel való játék nagyon mennyire
 frusztráló lehet!
 
 %description -l pl.UTF-8
-Klon gry tetris.
+Bastet oznacza "bastard tetris". Jest to prosty klon gry tetris z tekstowym
+interfejsem użytkownika opartym o bibliotekę ncurses. W odróżnieniu od innych
+implementacji gry tetris Bastet używa wyrafinowego algorytmu, który dobiera
+zawsze najgorszy klocek do aktualnej sytuacji. Można się zatem domyślić, że
+granie w Bastet jest bardzo frustrującym przeżyciem.
 
 %prep
 %setup -q
-%{__sed} -i 's@curses.h@ncurses/curses.h@' `grep -r -l 'curses.h' .`
+%{__sed} -i 's@curses.h@ncurses/curses.h@' *.?pp
 
 %build
+NCURSES_LIBS=$(ncurses5-config --libs)
 %{__make} \
 	CXX="%{__cxx}" \
 	CXXFLAGS="%{rpmcxxflags}" \
-	LDFLAGS="%{rpmldflags} `ncurses5-config --libs`"
+	LDFLAGS="%{rpmldflags} $NCURSES_LIBS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
