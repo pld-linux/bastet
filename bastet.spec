@@ -31,7 +31,7 @@ frusztráló lehet!
 %description -l pl.UTF-8
 Bastet oznacza "bastard tetris". Jest to prosty klon gry tetris z tekstowym
 interfejsem użytkownika opartym o bibliotekę ncurses. W odróżnieniu od innych
-implementacji gry tetris Bastet używa wyrafinowego algorytmu, który dobiera
+implementacji gry tetris Bastet używa wyrafinowanego algorytmu, który dobiera
 zawsze najgorszy klocek do aktualnej sytuacji. Można się zatem domyślić, że
 granie w Bastet jest bardzo frustrującym przeżyciem.
 
