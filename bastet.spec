@@ -3,12 +3,13 @@ Summary(hu.UTF-8):	Egy Tetris-klón
 Summary(pl.UTF-8):	Gra typu tetris
 Name:		bastet
 Version:	0.43
-Release:	3
+Release:	4
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://fph.altervista.org/prog/files/%{name}-%{version}.tgz
 # Source0-md5:	b47090daa7b6d89b98b5b477cf155733
 URL:		http://fph.altervista.org/prog/bastet.html
+BuildRequires:	boost-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
