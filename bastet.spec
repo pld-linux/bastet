@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Egy Tetris-klón
 Summary(pl.UTF-8):	Gra typu tetris
 Name:		bastet
 Version:	0.43
-Release:	18
+Release:	19
 License:	GPL v3+
 Group:		X11/Applications/Games
 Source0:	http://fph.altervista.org/prog/files/%{name}-%{version}.tgz
@@ -41,7 +41,7 @@ granie w Bastet jest bardzo frustrującym przeżyciem.
 %{__sed} -i 's@curses.h@ncurses/curses.h@' *.?pp
 
 %build
-NCURSES_LIBS=$(ncurses5-config --libs)
+NCURSES_LIBS=$(ncurses6-config --libs)
 %{__make} \
 	CXX="%{__cxx}" \
 	CXXFLAGS="%{rpmcxxflags}" \
