@@ -3,13 +3,14 @@ Summary(hu.UTF-8):	Egy Tetris-klón
 Summary(pl.UTF-8):	Gra typu tetris
 Name:		bastet
 Version:	0.43.2
-Release:	2
+Release:	3
 License:	GPL v3+
 Group:		X11/Applications/Games
 #Source0Download: https://github.com/fph/bastet/releases
 Source0:	https://github.com/fph/bastet/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	aee009b77b8cf9516d686bd24673800e
 Patch0:		%{name}-boost.patch
+Patch1:		format-security.patch
 URL:		http://fph.altervista.org/prog/bastet.html
 BuildRequires:	boost-devel
 BuildRequires:	ncurses-devel >= 6
@@ -42,6 +43,7 @@ bardzo frustrującym przeżyciem.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 NCURSES_LIBS=$(ncurses6-config --libs)

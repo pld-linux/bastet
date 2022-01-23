@@ -1,0 +1,47 @@
+--- bastet-0.43.2/Ui.cpp~	2015-08-30 09:04:24.000000000 +0200
++++ bastet-0.43.2/Ui.cpp	2022-01-23 17:03:25.191431152 +0100
+@@ -183,7 +183,7 @@
+ 
+     BorderedWindow w(d.y,d.x);
+     wattrset((WINDOW *)w,COLOR_PAIR(20));
+-    mvwprintw(w,0,0,message.c_str());
++    mvwprintw(w,0,0,"%s",message.c_str());
+     w.RedrawBorder();
+     wrefresh(w);
+     PrepareUiGetch();
+@@ -200,7 +200,7 @@
+     d.y+=3;
+     BorderedWindow w(d.y,d.x);
+     wattrset((WINDOW *)w,COLOR_PAIR(20));
+-    mvwprintw(w,0,0,message.c_str());
++    mvwprintw(w,0,0,"%s",message.c_str());
+     w.RedrawBorder();
+     wrefresh(w);
+     PrepareUiGetch();
+@@ -221,7 +221,7 @@
+ 
+     BorderedWindow w(d.y,d.x);
+     wattrset((WINDOW *)w,COLOR_PAIR(20));
+-    mvwprintw(w,0,0,message.c_str());
++    mvwprintw(w,0,0,"%s",message.c_str());
+     w.RedrawBorder();
+     wrefresh(w);
+     PrepareUiGetch();
+@@ -239,7 +239,7 @@
+     BorderedWindow w(d.y,d.x);
+     wattrset((WINDOW *)w,COLOR_PAIR(20));
+     for(size_t i=0;i<choices.size();++i){
+-      mvwprintw(w,i,4,choices[i].c_str());
++      mvwprintw(w,i,4,"%s",choices[i].c_str());
+     }
+     w.RedrawBorder();
+     wrefresh(w);
+@@ -290,7 +290,7 @@
+       Dot d=BoundingRect(msg );
+       BorderedWindow w(d.y,d.x);
+       wattrset((WINDOW *)w,COLOR_PAIR(20));
+-      mvwprintw(w,0,0,msg.c_str());
++      mvwprintw(w,0,0,"%s",msg.c_str());
+       w.RedrawBorder();
+       ch=getch();
+       switch(ch){
