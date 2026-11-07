@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Egy Tetris-klón
 Summary(pl.UTF-8):	Gra typu tetris
 Name:		bastet
 Version:	0.43.2
-Release:	8
+Release:	9
 License:	GPL v3+
 Group:		X11/Applications/Games
 #Source0Download: https://github.com/fph/bastet/releases
